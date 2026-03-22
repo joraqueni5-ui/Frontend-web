@@ -1,0 +1,206 @@
+﻿<script setup>
+import { ref, onMounted, computed } from 'vue'
+import { useRouter } from 'vue-router'
+import http from '../api/http'
+
+defineOptions({ name: 'HistorialPage' })
+
+const router = useRouter()
+const query = ref('')
+const filterFecha = ref('Todas las Fechas')
+const filterBloque = ref('Todos los Bloques')
+const filterDocente = ref('Todos los Docentes')
+const history = ref([])
+const loading = ref(false)
+
+const tryGet = async (path) => {
+  try { return await http.get(path) } catch (e) { return null }
+}
+
+async function loadHistory() {
+  loading.value = true
+  try {
+    const [resRec, resAtt] = await Promise.all([
+      tryGet('/api/recoveries'),
+      tryGet('/api/attendances')
+    ])
+    const arr1 = resRec && resRec.data ? resRec.data : []
+    const arr2 = resAtt && resAtt.data ? resAtt.data : []
+    // merge and remove duplicates by id (if both endpoints return same ids)
+    const map = new Map()
+    ;[...arr1, ...arr2].forEach(item => {
+      if (!item) return
+      const id = item.id ?? JSON.stringify(item)
+      map.set(id, item)
+    })
+    const merged = Array.from(map.values())
+    // sort by date (fechaRecuperacion, fecha, createdAt, date) desc
+    merged.sort((a,b) => {
+      const getDate = r => new Date(r.fechaRecuperacion || r.fecha || r.createdAt || r.date || null).getTime() || 0
+      return getDate(b) - getDate(a)
+    })
+    history.value = merged
+  } catch (e) {
+    console.error(e)
+    history.value = []
+  } finally {
+    loading.value = false
+  }
+}
+
+function filtered() {
+  const q = query.value?.toLowerCase()?.trim()
+  return history.value.filter(h => {
+    if (filterBloque.value !== 'Todos los Bloques' && h.paralelo !== filterBloque.value) return false
+    if (filterDocente.value !== 'Todos los Docentes' && ((h.docente && h.docente.nombre) !== filterDocente.value && String(h.docenteId) !== filterDocente.value)) return false
+    if (!q) return true
+    return (h.motivo || '').toLowerCase().includes(q) || (h.estado || '').toLowerCase().includes(q)
+  })
+}
+
+function goBack() {
+  router.push({ name: 'Registro' })
+}
+
+function statusClass(s) {
+  if (!s) return 'badge muted'
+  const t = s.toString().toLowerCase()
+  if (t.includes('presen')) return 'badge success'
+  if (t.includes('ausen') || t.includes('ausent')) return 'badge danger'
+  if (t.includes('just') || t.includes('aut')) return 'badge info'
+  return 'badge muted'
+}
+
+const uniqueDocentes = computed(() => {
+  const set = new Set()
+  history.value.forEach(h => {
+    const name = (h.docente && h.docente.nombre) || h.docenteNombre || (h.docenteId ? String(h.docenteId) : null)
+    if (name) set.add(name)
+  })
+  return Array.from(set)
+})
+
+function formatDate(rec) {
+  const f = rec && (rec.fechaRecuperacion || rec.fecha || rec.createdAt || rec.date)
+  const date = f ? new Date(f) : new Date()
+  try { return date.toLocaleString() } catch (e) { return '' }
+}
+
+onMounted(loadHistory)
+</script>
+
+<template>
+  <div class="historial-page centered">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Registro de Asistencia</h1>
+        <div class="page-title">Historial</div>
+        <button class="back-btn" @click="goBack">Atrás</button>
+      </div>
+
+      <div class="card-inner">
+        <div class="filters-row">
+          <div class="filter-item">
+            <label>Filtrar por Fecha</label>
+            <select v-model="filterFecha">
+              <option>Todas las Fechas</option>
+              <option>Última semana</option>
+              <option>Últimas 2 semanas</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label>Filtrar por Bloque</label>
+            <select v-model="filterBloque">
+              <option>Todos los Bloques</option>
+              <option>A</option>
+              <option>B</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <label>Filtrar por Docente</label>
+            <select v-model="filterDocente">
+              <option>Todos los Docentes</option>
+              <option v-for="d in uniqueDocentes" :key="d">{{ d }}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="left">
+            <div class="search-row">
+              <label class="search-label">Buscar:</label>
+              <div class="search-box">
+                <input v-model="query" placeholder="Buscar motivo o estado" />
+                <button class="search-btn" aria-label="Buscar">🔍</button>
+              </div>
+            </div>
+
+            <table class="hist-table">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Bloque</th>
+                  <th>Docente</th>
+                  <th>Materia</th>
+                  <th>Asistencia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="rec in filtered()" :key="rec.id">
+                  <td>{{ formatDate(rec) }}</td>
+                  <td>{{ rec.paralelo || '-' }}</td>
+                  <td>{{ (rec.docente && rec.docente.nombre) || rec.docenteNombre || rec.docenteId || '-' }}</td>
+                  <td>{{ (rec.materia && rec.materia.nombre) || rec.materia || rec.materiaId || '-' }}</td>
+                  <td><span :class="statusClass(rec.estado || rec.asistencia)">{{ (rec.estado || rec.asistencia) || '-' }}</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <aside class="actions">
+            <button class="action-btn edit">Editar</button>
+            <button class="action-btn save">Guardar</button>
+            <button class="action-btn delete">Eliminar</button>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.historial-page.centered { background: #faf7f6; min-height: 100vh; padding: 0; display:flex; align-items:center; justify-content:center }
+:root { --naranja: #ff6a00; --muted-bg: #fff6f3; }
+.card { width: 1100px; background: #fff; border-radius:12px; padding:20px 24px; box-shadow: 0 18px 40px rgba(255,106,0,0.06); border-left:6px solid var(--naranja) }
+.card-header { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px }
+.card-title{ margin:0; font-size:28px; font-weight:900 }
+.page-title{ font-weight:800; color:#000 }
+.back-btn{ background: linear-gradient(90deg,var(--naranja), #f58a3a); color:#000; border:none; font-weight:800; padding:8px 14px; border-radius:10px; cursor:pointer }
+
+.card-inner{ }
+.filters-row{ display:flex; gap:12px; margin-bottom:14px }
+.filter-item{ display:flex; flex-direction:column; gap:6px }
+.filter-item label{ font-size:13px; color:#000; font-weight:800; background:var(--naranja); padding:8px 10px; border-radius:8px }
+.filter-item select{ padding:10px 12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); background:#fff }
+
+.content{ display:flex; gap:20px }
+.left{ flex:1 }
+.search-row{ display:flex; align-items:center; gap:12px; margin-bottom:12px }
+.search-label{ font-size:16px; color:var(--naranja); font-weight:800 }
+.search-box{ display:flex; align-items:center; background:#fff; padding:6px; border-radius:999px; width:100%; box-shadow: 0 6px 18px rgba(14,21,29,0.04); border:1px solid rgba(0,0,0,0.04) }
+.search-box input{ flex:1; border:none; outline:none; background:transparent; font-size:14px; padding:8px 12px }
+
+.hist-table{ width:100%; border-collapse: collapse; margin-top:6px; background:#fff }
+.hist-table thead th{ text-align:left; padding:12px 14px; font-weight:700; color:#374151; background:#f3f4f6; border-bottom:1px solid rgba(0,0,0,0.06) }
+.hist-table tbody td{ padding:12px 14px; border-bottom:1px solid rgba(0,0,0,0.04); color:#333 }
+
+.badge{ display:inline-block; padding:6px 12px; border-radius:999px; font-weight:700; font-size:12px }
+.badge.success{ background:#e6fff0; color:#0b8a3e; }
+.badge.danger{ background:#fff0f0; color:#d43939 }
+.badge.info{ background:#f0f6ff; color:#1766d9 }
+.badge.muted{ background:#f4f4f4; color:#666 }
+.actions{ width:220px; display:flex; flex-direction:column; gap:12px; align-items:center; justify-content:flex-start; padding-top:6px }
+.action-btn{ width:160px; height:44px; border-radius:8px; background: linear-gradient(90deg,var(--naranja), #f58a3a); color:#000; font-size:14px; font-weight:700; border:none; cursor:pointer }
+.action-btn.delete{ background: linear-gradient(90deg,var(--naranja), #f58a3a); color:#000; border:none }
+@media (max-width: 900px){ .content{ flex-direction:column } .actions{ flex-direction:row; width:100%; justify-content:space-around } .card{ width:92% } }
+</style>

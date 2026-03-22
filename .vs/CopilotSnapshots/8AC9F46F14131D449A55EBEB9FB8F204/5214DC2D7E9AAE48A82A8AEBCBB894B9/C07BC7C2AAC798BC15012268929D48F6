@@ -1,0 +1,14 @@
+﻿{
+  "Mail": {
+    "SmtpHost": "smtp.tu-dominio.com",
+    "SmtpPort": 587,
+    "UseSsl": true,
+    "From": "no-reply@tu-dominio.com",
+    "User": "",
+    "Password": ""
+  },
+  "Otp": {
+    "Digits": 6,
+    "ExpireMinutes": 10
+  }
+}

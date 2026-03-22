@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+@import './base.css';
+
+/* Fondo y tipografía para sitio de escritorio */
+html, body { height: 100%; }
+
+body {
+  background: #ffffff !important; /* evitar fondo oscuro por prefers-color-scheme */
+  color: #1f2937;
+  line-height: 1.6;
+  font-family: 'Poppins', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* El contenedor raíz debe ocupar todo el ancho, sin grillas ni límites */
+#app {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* Enlaces por si los usas más adelante */
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }

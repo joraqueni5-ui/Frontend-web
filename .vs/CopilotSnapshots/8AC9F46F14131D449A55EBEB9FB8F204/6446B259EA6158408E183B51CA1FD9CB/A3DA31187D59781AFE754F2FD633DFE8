@@ -1,0 +1,220 @@
+﻿<template>
+  <div class="bien-page" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:80vh;padding:20px;">
+    <h1>Control de Asistencia</h1>
+    <p style="font-size:1.2rem;color:#333;">Has iniciado sesión con el rol de control. Bienvenido/a.</p>
+    <p style="margin-top:1rem;color:#666;">Si necesitas acceder al panel de control, usa el menú o pulsa el botón a continuación.</p>
+    <button @click="goToRegistro" style="margin-top:1.2rem;padding:10px 16px;border-radius:6px;border:none;background:#3b82f6;color:white;cursor:pointer;">Ir al registro</button>
+
+    <!-- FILA DE FILTROS -->
+    <div class="filters-card">
+      <div class="row">
+        <label>Bloque</label>
+        <select v-model="filters.bloque">
+          <option value="">Todos</option>
+          <option value="A">Bloque A</option>
+          <option value="B">Bloque B</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label>Aula</label>
+        <select v-model="filters.aula">
+          <option value="">Todas</option>
+          <option v-for="a in aulasDisponibles" :key="a" :value="a">{{ a }}</option>
+        </select>
+      </div>
+
+      <div class="row small">
+        <label>Fecha</label>
+        <input type="date" v-model="filters.fecha" />
+      </div>
+
+      <div class="row small">
+        <label>Hora (HH:MM)</label>
+        <input type="time" v-model="filters.hora" />
+      </div>
+
+      <div class="actions">
+        <button class="btn" @click="consultarHorario" :disabled="loading">
+          {{ loading ? 'Consultando...' : 'Consultar' }}
+        </button>
+        <button class="btn-ghost" @click="autoNow">Usar hora actual</button>
+      </div>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="results-card">
+      <h3>RESULTADOS DEL HORARIO</h3>
+
+      <template v-if="horario.materias && horario.materias.length">
+        <div class="table-wrapper"><table class="table">
+          <thead>
+            <tr>
+              <th>Aula</th>
+              <th>Materia</th>
+              <th>Docente</th>
+              <th>Inicio</th>
+              <th>Fin</th>
+              <th>Registrar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="m in horario.materias" :key="m.aula + m.asignatura + (m.horalInicio || m.horaInicio)">
+              <td>{{ m.aula }}</td>
+              <td>{{ m.asignatura }}</td>
+              <td>{{ m.docente }}</td>
+              <td>{{ m.horalInicio ?? m.horaInicio ?? '-' }}</td>
+              <td>{{ m.horaFin ?? '-' }}</td>
+              <td>
+                <button class="btn-small" @click="openRegistrar(m)">Registrar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table></div>
+      </template><template v-else>
+        <div class="empty"><p>No hay materias para el filtro seleccionado.</p></div>
+      </template>
+    </div>
+
+    <!-- MODAL: Registrar Asistencia -->
+    <div class="modal-backdrop" v-if="modal.open">
+      <div class="modal">
+        <h3>Registrar asistencia - {{ modal.item.asignatura }}</h3>
+        <p><strong>Docente:</strong> {{ modal.item.docente }} | <strong>Aula:</strong> {{ modal.item.aula }}</p>
+
+        <label>Tipo</label>
+        <select v-model="modal.form.asistencia">
+          <option value="Presente">Presente</option>
+          <option value="Ausente">Ausente</option>
+          <option value="Licencia">Licencia</option>
+          <option value="Reemplazo">Reemplazo</option>
+        </select>
+
+        <label>Observación (opcional)</label>
+        <textarea v-model="modal.form.observacion" rows="3"></textarea>
+
+        <div class="modal-actions">
+          <button class="btn" @click="submitAsistencia" :disabled="modal.loading">
+            {{ modal.loading ? 'Guardando...' : 'Guardar' }}
+          </button>
+          <button class="btn-ghost" @click="closeModal">Cancelar</button>
+        </div>
+
+        <p v-if="modal.error" class="error">{{ modal.error }}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, reactive } from 'vue'
+
+const loading = ref(false)
+const filters = reactive({
+  bloque: '',
+  aula: '',
+  fecha: new Date().toISOString().slice(0, 10),
+  hora: new Date().toTimeString().slice(0,5)
+})
+const aulasDisponibles = ref(['201','202','203','204','301','302'])
+const horario = reactive({ materias: [] })
+
+const modal = reactive({
+  open: false,
+  item: {},
+  form: { asistencia: 'Presente', observacion: '' },
+  loading: false,
+  error: ''
+})
+
+function autoNow() {
+  filters.fecha = new Date().toISOString().slice(0,10)
+  filters.hora = new Date().toTimeString().slice(0,5)
+}
+
+async function consultarHorario() {
+  loading.value = true
+  try {
+    const fechaObj = new Date(filters.fecha + 'T' + filters.hora + ':00')
+    const dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado']
+    const diaNombre = dias[fechaObj.getDay()]
+    const params = new URLSearchParams({ dia: diaNombre, hora: filters.hora })
+    if (filters.bloque) params.set('bloque', filters.bloque)
+    if (filters.aula) params.set('aula', filters.aula)
+
+    const res = await fetch(`/Horario?${params.toString()}`)
+    const data = res.ok ? await res.json() : { materias: [] }
+    horario.materias = data.materias || []
+  } finally {
+    loading.value = false
+  }
+}
+
+function openRegistrar(item) {
+  modal.item = item
+  modal.form.asistencia = 'Presente'
+  modal.form.observacion = ''
+  modal.error = ''
+  modal.open = true
+}
+function closeModal() { modal.open = false; modal.loading = false; modal.error = '' }
+
+async function submitAsistencia() {
+  modal.error = ''
+  modal.loading = true
+  try {
+    const payload = {
+      docenteId: modal.item.docenteId ?? null,
+      aula: modal.item.aula,
+      materia: modal.item.asignatura,
+      paralelo: modal.item.paralelo,
+      asistencia: modal.form.asistencia,
+      observacion: modal.form.observacion,
+      fecha: filters.fecha + ' ' + filters.hora
+    }
+    const res = await fetch('/Asistencia', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload)
+    })
+    if (!res.ok) throw new Error(await res.text() || 'Error guardando asistencia')
+    closeModal(); await consultarHorario()
+  } catch (err) {
+    modal.error = 'Error al guardar. ' + err.message
+  } finally {
+    modal.loading = false
+  }
+}
+</script>
+
+<style scoped>
+.bien-page h1 { color: #1f2937; }
+
+.dashboard { width:100%; max-width:1100px; display:grid; grid-template-columns:320px 1fr; gap:18px; }
+.filters-card { background:white; padding:16px; border-radius:8px; box-shadow:0 6px 16px rgba(0,0,0,0.04); }
+.row { margin-bottom:12px; display:flex; flex-direction:column; }
+.row.small { width:48%; display:inline-block; margin-right:4%; }
+.actions { display:flex; gap:10px; margin-top:8px; align-items:center; flex-wrap:wrap; }
+.results-card { background:white; padding:16px; border-radius:8px; box-shadow:0 6px 16px rgba(0,0,0,0.04); }
+.table-wrapper { width:100%; overflow-x:auto; }
+.table { width:100%; min-width:640px; border-collapse:collapse; margin-top:8px; }
+.table th, .table td { padding:10px 8px; text-align:left; border-bottom:1px solid #eee; font-size:0.95rem; }
+.btn { background:#ff9800; color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.btn:disabled { opacity:0.6; cursor:not-allowed; }
+.btn-ghost { background:transparent; color:#333; border:1px solid #ddd; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.btn-small { padding:6px 8px; font-size:0.85rem; border-radius:6px; background:#1976d2; color:white; border:none; }
+.empty { padding:20px; color:#666; }
+.error { color:#b71c1c; margin-top:10px; }
+.modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; }
+.modal { width:460px; max-width:95vw; background:white; padding:18px; border-radius:8px; box-shadow:0 18px 50px rgba(0,0,0,0.3); }
+.modal-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; flex-wrap:wrap; }
+
+/* Responsiveness */
+@media (max-width: 980px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .row.small { width:100%; display:block; margin-right:0; }
+}
+@media (max-width: 640px) {
+  .filters-card { padding:12px; }
+  .results-card { padding:12px; }
+  .table th, .table td { padding:8px 6px; font-size:0.9rem; }
+}
+</style>

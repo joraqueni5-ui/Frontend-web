@@ -1,0 +1,4 @@
+C:\Users\Stephanie\OneDrive\Escritorio\Programación\VISUAL STUDIO\WEB DE CONTROL DE ASISTENCIA\frontpeticion\obj\Debug\FrontendWeb.esproj.CoreCompileInputs.cache
+C:\Users\Stephanie\OneDrive\Escritorio\Programación\VISUAL STUDIO\WEB DE CONTROL DE ASISTENCIA\FrontendWeb\obj\Debug\FrontendWeb.esproj.CoreCompileInputs.cache
+C:\Users\Stephanie\OneDrive\Escritorio\Programación\VISUAL STUDIO\pruebita\MODULO_COASI\FrontendWeb\obj\Debug\FrontendWeb.esproj.CoreCompileInputs.cache
+C:\Users\Stephanie\OneDrive\Escritorio\Programación\VISUAL STUDIO\pruebita 2\FrontendWeb\obj\Debug\FrontendWeb.esproj.CoreCompileInputs.cache

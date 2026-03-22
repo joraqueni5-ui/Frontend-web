@@ -1,0 +1,2 @@
+C:\Users\pato\Desktop\Folder Para folderes\BackendMatutinoxd\FrontPeticion\obj\Debug\frontpeticion.esproj.CoreCompileInputs.cache
+C:\Users\Stephanie\OneDrive\Escritorio\Programación\VISUAL STUDIO\WEB DE CONTROL DE ASISTENCIA\FrontPeticion\obj\Debug\frontpeticion.esproj.CoreCompileInputs.cache

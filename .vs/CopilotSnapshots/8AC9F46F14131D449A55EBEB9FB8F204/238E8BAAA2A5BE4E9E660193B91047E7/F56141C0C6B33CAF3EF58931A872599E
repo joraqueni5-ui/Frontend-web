@@ -1,0 +1,23 @@
+﻿<template>
+  <div class="bien-page" style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:80vh;padding:20px;">
+    <h1>Control de Asistencia</h1>
+    <p style="font-size:1.2rem;color:#333;">Has iniciado sesión con el rol de control. Bienvenido/a.</p>
+    <p style="margin-top:1rem;color:#666;">Si necesitas acceder al panel de control, usa el menú o pulsa el botón a continuación.</p>
+    <button @click="goToRegistro" style="margin-top:1.2rem;padding:10px 16px;border-radius:6px;border:none;background:#3b82f6;color:white;cursor:pointer;">Ir al registro</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'BienPage',
+  methods: {
+    goToRegistro() {
+      this.$router.push({ name: 'Registro' });
+    }
+  }
+}
+</script>
+
+<style scoped>
+.bien-page h1 { color: #1f2937; }
+</style>

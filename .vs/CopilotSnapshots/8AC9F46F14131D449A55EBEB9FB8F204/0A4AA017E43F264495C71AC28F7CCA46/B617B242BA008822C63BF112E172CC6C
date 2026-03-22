@@ -1,0 +1,41 @@
+﻿<script setup>
+// App central ahora usa router-view dentro de un shell administrativo
+</script>
+
+<template>
+  <div class="app-root">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">UNIV</div>
+      <h1 class="title">Control de Asistencia - Tiempo Real</h1>
+      <div class="user-area" v-if="user.logged">
+        <span>{{ user.email }}</span>
+        <button class="btn-link" @click="logout">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- LOGIN (modal-like center) -->
+      <section v-if="!user.logged" class="login-card">
+        <!-- ... placeholder: content rendered by routed pages ... -->
+        <router-view />
+      </section>
+
+      <!-- DASHBOARD -->
+      <section v-else class="dashboard">
+        <router-view />
+      </section>
+    </main>
+  </div>
+</template>
+
+<style>
+/* keep existing styles minimal; rely on component scoped styles for details */
+.app-root { min-height:100vh; background:#f7f7f8; color:#333; }
+.header { display:flex; gap:16px; align-items:center; padding:12px 20px; background:#b71c1c; color:white; }
+.logo { font-weight:700; background: rgba(255,255,255,0.12); padding:8px 12px; border-radius:6px; }
+.title { flex:1; font-size:1.05rem; }
+.user-area { display:flex; gap:8px; align-items:center; }
+.main { padding:20px; }
+</style>

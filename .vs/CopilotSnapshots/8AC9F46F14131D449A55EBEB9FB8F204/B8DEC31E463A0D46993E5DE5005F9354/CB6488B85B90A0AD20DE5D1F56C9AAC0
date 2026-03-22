@@ -1,0 +1,17 @@
+﻿import { createRouter, createWebHistory } from 'vue-router'
+import RegistroRecuperatorio from '../components/RegistroRecuperatorio.vue'
+import HistorialPage from '../components/HistorialPage.vue'
+import BienPage from '../components/BienPage.vue'
+
+const routes = [
+  { path: '/', name: 'Registro', component: RegistroRecuperatorio },
+  { path: '/historial', name: 'Historial', component: HistorialPage },
+  { path: '/bien', name: 'Bien', component: BienPage }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+})
+
+export default router

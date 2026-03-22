@@ -1,0 +1,69 @@
+﻿<script setup>
+// App central usa router-view dentro de un shell administrativo existente
+</script>
+
+<template>
+  <div id="app" class="app-shell">
+    <header class="admin-header">
+      <div class="brand">
+        <div class="logo">UF</div>
+        <div class="brand-text">
+          <div class="brand-title">UNIFRANZ</div>
+          <div class="brand-sub">Control de Asistencia - Sistemas</div>
+        </div>
+      </div>
+      <div class="title center">Control Docente - Tiempo Real</div>
+      <div class="user-area">
+        <span class="user-name">Usuario</span>
+        <button class="btn-link">Salir</button>
+      </div>
+    </header>
+
+    <main class="content-area">
+      <div class="page-shell">
+        <router-view />
+      </div>
+    </main>
+  </div>
+</template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+:root{
+  --orange-500: #f36d1a;
+  --orange-600: #f26522;
+  --muted: #f7f4f2;
+  --text: #111;
+  --header-h: 72px;
+}
+
+html,body,#app{ height:100%; margin:0; }
+.app-shell{ font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text); background:#fffaf8 }
+
+/* Fixed header: solid orange band across the top */
+.admin-header{
+  position:fixed; inset:0 0 auto 0; height:var(--header-h); display:flex; align-items:center; justify-content:space-between; padding:12px 28px; background:linear-gradient(90deg,var(--orange-600),var(--orange-500)); color:#fff; box-shadow: 0 4px 14px rgba(0,0,0,0.06); z-index:9999
+}
+.brand{ display:flex; align-items:center; gap:12px }
+.logo{ width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:#fff; color:var(--orange-600); border-radius:6px; font-weight:800 }
+.brand-text{ display:flex; flex-direction:column }
+.brand-title{ font-weight:800; font-size:14px; color:#fff }
+.brand-sub{ font-size:12px; color:rgba(255,255,255,0.9); margin-top:2px }
+.admin-header .title.center{ flex:1; text-align:center; font-weight:800; letter-spacing:1px; font-size:16px }
+.user-area{ display:flex; align-items:center; gap:8px }
+.user-name{ font-weight:600 }
+.btn-link{ background:transparent; border:none; color:#fff; text-decoration:underline; cursor:pointer }
+
+/* Ensure main content sits below fixed header */
+.content-area{ padding-top: calc(var(--header-h) + 12px); }
+
+/* Page shell full-bleed */
+.page-shell{ width:100%; margin:0; background:transparent; border-radius:0; padding:0 18px 36px; min-height: calc(100vh - var(--header-h)); }
+
+/* Page headings */
+.page-shell h1, .page-shell h2{ color:var(--text); font-weight:800 }
+
+.cta{ display:inline-block; text-align:center; padding:12px 14px; background: linear-gradient(90deg,var(--orange-600),var(--orange-500)); color:#fff; font-weight:700; border-radius:10px; text-decoration:none; box-shadow: 0 6px 18px rgba(243,109,26,0.12) }
+
+@media(max-width:900px){ .page-shell{ padding:0 12px 20px } .admin-header .title.center{ display:none } }
+</style>

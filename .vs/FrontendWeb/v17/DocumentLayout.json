@@ -1,0 +1,392 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\components\\login.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\components\\login.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\components\\otpverify.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\components\\otpverify.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\jsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:jsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:server.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\app.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\app.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\components\\historialpage.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\components\\historialpage.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\assets\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\assets\\base.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\router\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\router\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\components\\bienpage.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\components\\bienpage.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\assets\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\assets\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\assets\\logo.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\assets\\logo.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\src\\api\\http.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:src\\api\\http.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\public\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:public\\favicon.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|c:\\users\\stephanie\\onedrive\\escritorio\\programaci\u00F3n\\visual studio\\pruebita\\modulo_coasi\\frontendweb\\frontendweb.esproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{012211DA-5E2E-74C8-850D-3919FFD445D3}|FrontendWeb.esproj|solutionrelative:frontendweb.esproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\HelloWorld.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\TheWelcome.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\WelcomeItem.vue||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-03T19:27:55.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OtpVerify.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\OtpVerify.vue",
+              "RelativeDocumentMoniker": "src\\components\\OtpVerify.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\OtpVerify.vue",
+              "RelativeToolTip": "src\\components\\OtpVerify.vue",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-03T19:27:27.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\Login.vue",
+              "RelativeDocumentMoniker": "src\\components\\Login.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\Login.vue",
+              "RelativeToolTip": "src\\components\\Login.vue",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-03T19:26:54.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HelloWorld.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\HelloWorld.vue",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\HelloWorld.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\HelloWorld.vue",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\HelloWorld.vue",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-02T22:32:31.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-02T20:43:00.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "jsconfig.json",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\jsconfig.json",
+              "RelativeDocumentMoniker": "jsconfig.json",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\jsconfig.json",
+              "RelativeToolTip": "jsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-02T22:32:51.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TheWelcome.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\TheWelcome.vue",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\TheWelcome.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\TheWelcome.vue",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\TheWelcome.vue",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-02T22:32:37.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "server.js",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\server.js",
+              "RelativeDocumentMoniker": "server.js",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\server.js",
+              "RelativeToolTip": "server.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-02T22:37:01.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "vite.config.js",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\vite.config.js",
+              "RelativeDocumentMoniker": "vite.config.js",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\vite.config.js",
+              "RelativeToolTip": "vite.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-21T02:16:20.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WelcomeItem.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\WelcomeItem.vue",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\WelcomeItem.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\WelcomeItem.vue",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\CopilotBaseline\\Deleted\\-1932414539\\WelcomeItem.vue",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-02T22:32:43.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-12-02T22:31:18.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\App.vue",
+              "RelativeDocumentMoniker": "src\\App.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\App.vue",
+              "RelativeToolTip": "src\\App.vue",
+              "ViewState": "AgIAADoAAAAAAAAAAEBlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-02T20:47:44.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HistorialPage.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\HistorialPage.vue",
+              "RelativeDocumentMoniker": "src\\components\\HistorialPage.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\HistorialPage.vue",
+              "RelativeToolTip": "src\\components\\HistorialPage.vue",
+              "ViewState": "AgIAALgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-02T22:08:08.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BienPage.vue",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\BienPage.vue",
+              "RelativeDocumentMoniker": "src\\components\\BienPage.vue",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\components\\BienPage.vue",
+              "RelativeToolTip": "src\\components\\BienPage.vue",
+              "ViewState": "AgIAANoAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003491|",
+              "WhenOpened": "2025-12-02T20:43:35.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\assets\\main.css",
+              "RelativeDocumentMoniker": "src\\assets\\main.css",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\assets\\main.css",
+              "RelativeToolTip": "src\\assets\\main.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-02T20:43:29.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "logo.svg",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\assets\\logo.svg",
+              "RelativeDocumentMoniker": "src\\assets\\logo.svg",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\assets\\logo.svg",
+              "RelativeToolTip": "src\\assets\\logo.svg",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQESURBVDhPrZRdbJNVHMZ/b/u26xfUbqPYbd2wIKxsbGDYpk6joISJCuIHRkyMVxpDNBpjQjDRZFfeaFiI3ojGS00MshgvIEQkYyTAnJMs4yPb2Nqt27p17d5\u002B0L7v23O8WDc28JIneXK\u002B/ufJ\u002BZ/znD88SEgplXvnurq6jjc2Nn5UWkdKuRQLgBCCfD5PNpvtPnr06JFoNBpbrXAPurq6hoQQolgs/i9N0xQDAwOir69PnDhx4tdwOLxl5X7rygFAR0fHkba2tkohwdRTiNw1lMwP6DM/Y0z9AcDwhMHOljacTmfIbrfXTE5OXkskEon7BO2tbyr1za1HbuTKKm9N9rLW/A7nzPeYsbOgbEHIIGb8EtFZqNvcis/nU10u16by8vLg9evXL6bT6fSioKLgfmy/r/bF975cE6h9viVss\u002B9efxzv9BkGRrfzm/YxI2WH2da8DzE7RMZwc7F/jP7\u002BfjRNs/p8vvCFCxd\u002BSaVSMRXA0bjXW3fgw8\u002Be21nz/mvbRlw7xeckbubozR7jVugVorqTSyPTZI0xXvc3UN\u002B8kRr86LqOx\u002BNhcHBwOUsLgL/jg/a28Lq3DzVcXtuS\u002B1RZGMgzqXSSW3cQWxbchknthiquzhbpST6CsqaWysoKAoEAXq8Xq9W67AILQF3Ac/Dl\u002BqGKJuMbZa7PwNX0E9seP8ihHQHeaqokMzWLz16G4nbSl7Axl7eUziNhhbUAVICt61JPP\u002BH90ZkZdfCt8QUTf9kwzH8RUiIR5IsqFaoFm93G6GyBZFqnaq0DKQHlrkcB1KqAan\u002B36UyNLTKinLd8Jd0te5SQtLAYTUlUYtzR0XWDgmliSllalsh7PoBl4kbtgc3i97IrmcNyqGJv8cqlm1KOjiNGxigO36Y4fBsxfBslOk51YZ5ngx78HntJbPUvAlClFntjZry6cL64CyMrVbfTZmkPVSo7qt14HSpa3uDyWJJIMgdSEvS58DjUpQQW73EF1PxEvj2ZLfuzd1rdWqum6taHqpWzUznO3ppB6gaqXaXoqSBZdDEfn\u002BcFi4LNcrcELKW8BIu5oDj3HSscjk3PfX1zaDQxPpWWunsN1G5A2fQoheo64lIhHk8Qcpi81Lgeu3Xple\u002BH9dg7\u002BJ95OBm62nujpy5gMzIpo17LCPdEfIHEXIo7iXls6QUaHlL5ZNdGyt12UJRlyyiKQiQS4fTp0yc1TYtZN1RxOTbN7rB95pnqeM9goKbZtefJp\u002Br9tiJbvCqtVW72N/h5dXsVDpu6eIySXQAUi4VIJEp3d/dJTdPuL2WdnZ09QghhGEaJujD0RerLLCy3hmGIc\u002BfOiWAw2MKSsVdCSvn3qVOn2kt9pJQIIVYV2pUE0DTtH2B\u002BtdIDwn\u002B7nChdLXVvTAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-12-02T20:43:26.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "base.css",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\assets\\base.css",
+              "RelativeDocumentMoniker": "src\\assets\\base.css",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\assets\\base.css",
+              "RelativeToolTip": "src\\assets\\base.css",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-02T20:43:20.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "http.js",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\api\\http.js",
+              "RelativeDocumentMoniker": "src\\api\\http.js",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\api\\http.js",
+              "RelativeToolTip": "src\\api\\http.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-02T20:43:17.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\router\\index.js",
+              "RelativeDocumentMoniker": "src\\router\\index.js",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\src\\router\\index.js",
+              "RelativeToolTip": "src\\router\\index.js",
+              "ViewState": "AgIAABMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-02T20:42:43.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "favicon.ico -  [Espa\u00F1ol (M\u00E9xico)] - Icon [32x32, 32 bits, BMP]",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\public\\favicon.ico",
+              "RelativeDocumentMoniker": "public\\favicon.ico",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\public\\favicon.ico -  [Espa\u00F1ol (M\u00E9xico)] - Icon [32x32, 32 bits, BMP]",
+              "RelativeToolTip": "public\\favicon.ico -  [Espa\u00F1ol (M\u00E9xico)] - Icon [32x32, 32 bits, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2025-12-02T20:43:09.57Z",
+              "EditorCaption": " -  [Espa\u00F1ol (M\u00E9xico)] - Icon [32x32, 32 bits, BMP]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "launch.json",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\.vscode\\launch.json",
+              "RelativeDocumentMoniker": ".vscode\\launch.json",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\.vscode\\launch.json",
+              "RelativeToolTip": ".vscode\\launch.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-02T20:43:06.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FrontendWeb.esproj.user",
+              "DocumentMoniker": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\FrontendWeb.esproj.user",
+              "RelativeDocumentMoniker": "FrontendWeb.esproj.user",
+              "ToolTip": "C:\\Users\\Stephanie\\OneDrive\\Escritorio\\Programaci\u00F3n\\VISUAL STUDIO\\pruebita\\MODULO_COASI\\FrontendWeb\\FrontendWeb.esproj.user",
+              "RelativeToolTip": "FrontendWeb.esproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2025-11-21T02:16:47.267Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

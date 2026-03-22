@@ -1,0 +1,14 @@
+﻿{
+  "Mail": {
+    "SmtpHost": "smtp.gmail.com",
+    "SmtpPort": 587,
+    "UseSsl": true,
+    "From": "segundosemestreproyecto00@gmail.com",
+    "User": "segundosemestreproyecto00@gmail.com",
+    "Password": "ghmd yvjq gdqy bpaf"
+  },
+  "Otp": {
+    "Digits": 6,
+    "ExpireMinutes": 10
+  }
+}
